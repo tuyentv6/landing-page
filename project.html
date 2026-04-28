@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết dự án - zDauPhu</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="./index.html">
+          <img id="brand-logo" alt="Logo" />
+          <span id="brand-name"></span>
+        </a>
+        <nav class="main-nav">
+          <a href="./index.html#about">Giới Thiệu</a>
+          <a href="./index.html#projects">Dự Án</a>
+          <a href="./index.html#news">Tin Tức</a>
+          <a href="./index.html#partners">Đối Tác</a>
+          <a href="./index.html#contact">Liên Hệ</a>
+        </nav>
+      </div>
+    </header>
+
+    <section id="hero" class="hero" style="min-height: 56vh">
+      <div class="overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">Chi tiết dự án</p>
+        <h1 id="project-name"></h1>
+        <p id="project-desc"></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width: 900px">
+        <img
+          id="project-image"
+          alt="Project image"
+          style="width: 100%; border-radius: 16px; object-fit: cover; max-height: 480px"
+        />
+        <p id="project-long-desc" class="section-subtitle" style="text-align: left; max-width: 100%; margin-top: 20px"></p>
+        <button id="back-home" class="btn btn-primary" style="margin-top: 24px">
+          Quay về trang chủ
+        </button>
+      </div>
+    </section>
+
+    <script src="./config/media.config.js"></script>
+    <script src="./project.js"></script>
+  </body>
+</html>

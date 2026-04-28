@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>zDauPhu Landing Page</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="./index.html">
+          <img id="brand-logo" alt="Logo" />
+          <span id="brand-name"></span>
+        </a>
+        <nav class="main-nav">
+          <a href="#about">Giới Thiệu</a>
+          <a href="#projects">Dự Án</a>
+          <a href="#news">Tin Tức</a>
+          <a href="#partners">Đối Tác</a>
+          <a href="#contact">Liên Hệ</a>
+        </nav>
+      </div>
+    </header>
+
+    <section id="hero" class="hero">
+      <div class="overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow" id="hero-eyebrow"></p>
+        <h1 id="hero-title"></h1>
+        <p id="hero-subtitle"></p>
+        <div class="hero-actions">
+          <button id="cta-primary" class="btn btn-primary"></button>
+          <button id="cta-secondary" class="btn btn-ghost"></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">Chúng tôi là zDauPhu</h2>
+        <p class="section-subtitle">
+          Tuổi trẻ đam mê và nhiệt huyết, mang lại nhiều giá trị cho cộng đồng.
+        </p>
+        <div id="services-grid" class="services-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Nổi Bật</h2>
+        <div class="slider" id="slider">
+          <button class="slider-btn prev" id="slide-prev" aria-label="Previous">
+            &#10094;
+          </button>
+          <div id="slides-wrapper" class="slides-wrapper"></div>
+          <button class="slider-btn next" id="slide-next" aria-label="Next">
+            &#10095;
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Dự Án Nổi Bật</h2>
+        <div id="projects-grid" class="projects-grid"></div>
+      </div>
+    </section>
+
+    <section id="news" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Video Giới Thiệu</h2>
+        <div id="video-grid" class="video-grid"></div>
+      </div>
+    </section>
+
+    <section class="section stats-section">
+      <div class="container">
+        <h2 class="section-title">Những Con Số Ấn Tượng</h2>
+        <div id="stats-grid" class="stats-grid"></div>
+      </div>
+    </section>
+
+    <section id="partners" class="section">
+      <div class="container">
+        <h2 class="section-title">Đối Tác</h2>
+        <div id="partners-grid" class="partners-grid"></div>
+      </div>
+    </section>
+
+    <footer id="contact" class="site-footer">
+      <div class="container footer-content">
+        <div>
+          <h3>Liên Hệ</h3>
+          <p id="contact-phone"></p>
+          <p id="contact-address"></p>
+          <p id="contact-email"></p>
+        </div>
+        <p class="copyright">Copyright © zDauPhu</p>
+      </div>
+    </footer>
+
+    <div id="contact-modal" class="modal" aria-hidden="true">
+      <div class="modal-backdrop" id="modal-backdrop"></div>
+      <div class="modal-content" role="dialog" aria-modal="true" aria-label="Thông tin liên hệ">
+        <button id="modal-close" class="modal-close" aria-label="Đóng">&times;</button>
+        <h3>Thông tin liên hệ</h3>
+        <p id="modal-phone"></p>
+        <p id="modal-address"></p>
+        <p id="modal-email"></p>
+      </div>
+    </div>
+
+    <script src="./config/media.config.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
