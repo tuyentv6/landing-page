@@ -168,10 +168,51 @@ body {
   color: var(--muted);
 }
 
+#about.section {
+  padding-top: 10px;
+}
+
+.about-inner {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.about-inner .section-title {
+  color: #e2be00;
+  font-size: clamp(2.3rem, 4vw, 3.3rem);
+  margin-top: 0;
+}
+
+.about-marquee {
+  margin: -4px auto 28px;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.achievement-detail>.about-marquee {
+  margin: 20px auto 28px;
+  max-width: 60%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.about-marquee-track {
+  display: inline-block;
+  padding-left: 100%;
+  animation: about-marquee 20s linear infinite;
+}
+
+.about-marquee span {
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  font-weight: 800;
+  color: #d2a600;
+}
+
 .services-grid,
 .projects-grid,
 .stats-grid,
-.partners-grid,
+/* .partners-grid, */
 .video-grid {
   margin-top: 30px;
   display: grid;
@@ -180,27 +221,226 @@ body {
 
 .services-grid {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 100%;
 }
 
 .service-card {
-  background: white;
-  border-radius: var(--radius);
-  padding: 22px;
-  box-shadow: 0 12px 30px rgba(17, 31, 66, 0.08);
+  background: linear-gradient(125deg, #ffd800 0%, #f5da67 62%, #efe9c6 100%);
+  border-radius: 14px;
+  padding: 24px 18px;
+  border: 1px solid #e7ce6d;
+  box-shadow: 0 8px 16px rgba(17, 31, 66, 0.16);
+  min-height: 300px;
 }
 
 .service-card img {
-  width: 42px;
-  height: 42px;
+  display: none;
 }
 
 .service-card h3 {
-  margin: 12px 0 6px;
+  margin: 0 0 14px;
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #101010;
+  text-align: center;
+  line-height: 1;
+}
+
+.service-card small {
+  display: none;
 }
 
 .service-card p {
   margin: 0;
-  color: var(--muted);
+  color: #1f2534;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.enjohub-intro {
+  padding: 0;
+}
+
+.enjohub-intro-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 630px;
+  width: 100%;
+}
+
+.enjohub-bg-parallax {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: -12%;
+  height: 620px;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url("https://enjogroup.com/wp-content/uploads/2023/12/beauty_1685938611370.jpg");
+  background-size: cover;
+  background-position: left center;
+  will-change: transform;
+}
+
+.enjohub-intro-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  max-width: 1500px;
+  padding: 76px 7vw;
+}
+
+.enjohub-eyebrow {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffd84f;
+}
+
+.enjohub-intro-content h2 {
+  margin: 10px 0 14px;
+  font-size: clamp(2.1rem, 4vw, 3rem);
+  line-height: 1.1;
+}
+
+.enjohub-intro-content p {
+  margin: 0 0 22px;
+  color: #fff;
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+.enjohub-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  background: rgb(243 184 84);
+  ;
+  color: rgb(255 253 251);
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.enjohub-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+
+.achievement-strip-inner {
+  position: relative;
+  overflow: hidden;
+  min-height: 680px;
+  background-image: url(https://ttmgroup.vn/wp-content/uploads/2025/02/2222.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: block;
+}
+
+.achievement-video-bg {
+  position: absolute;
+  inset: 0;
+  width: 60%;
+  height: auto;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+}
+
+.achievement-grid {
+  display: grid;
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  width: 62%;
+  top: 80%;
+  left: 19%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.achievement-item {
+  color: #fff;
+  padding: 28px 21px 26px;
+  text-align: center;
+}
+
+.achievement-item.center {
+  text-align: center;
+}
+
+.achievement-item.right {
+  text-align: right;
+}
+
+.achievement-item:first-child {
+  border-left: 0;
+}
+
+.achievement-icon {
+  width: 110px;
+  height: 84px;
+  object-fit: contain;
+}
+
+.achievement-item h3 {
+  margin: 10px 0 2px;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+}
+
+.achievement-item h4 {
+  margin: 0;
+  font-size: clamp(1.2rem, 2.2vw, 2rem);
+  font-weight: 800;
+}
+
+.achievement-highlight {
+  margin: 14px 0 4px;
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  font-weight: 800;
+  color: #ffd52f;
+}
+
+.achievement-caption {
+  margin: 0;
+  color: #d7d7d7;
+}
+
+.reveal-item {
+}
+
+.reveal-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes about-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-marquee-track {
+    animation: none;
+  }
+
+  .enjohub-bg-parallax {
+    top: 0;
+    height: 100%;
+    transform: none !important;
+    will-change: auto;
+  }
 }
 
 .slider {
@@ -259,8 +499,12 @@ body {
   right: 12px;
 }
 
+.project-container {
+  width: min(100%, 100vw);
+}
+
 .projects-grid {
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
 }
 
 .project-card {
@@ -329,11 +573,11 @@ body {
   color: var(--muted);
 }
 
-.partners-grid {
+/* .partners-grid {
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-}
+} */
 
-.partner {
+/* .partner {
   background: white;
   border-radius: 12px;
   padding: 12px;
@@ -345,19 +589,16 @@ body {
   width: 100%;
   max-width: 110px;
   object-fit: contain;
-}
+} */
 
 .site-footer {
   background: var(--dark);
   color: #d6ddf2;
-  padding: 40px 0;
+  padding: 10px 0;
 }
 
 .footer-content {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
+  text-align: center;
 }
 
 .footer-content h3 {
@@ -414,4 +655,392 @@ body {
   .slide img {
     height: 320px;
   }
+
+  .enjohub-intro-content {
+    padding: 44px 20px;
+  }
+
+  .achievement-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achievement-item {
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .achievement-item:first-child {
+    border-top: 0;
+  }
+
+}
+
+.achievement-detail {
+  text-align: center;
+  padding: 0px 20px;
+  position: relative;
+}
+
+.achievement-title {
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* BOX vàng */
+.achievement-detail-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #f5c400;
+  border-radius: 50px;
+  padding: 1.5% 40px;
+  max-width: 60%;
+  margin: 0 auto;
+  margin-top: 14px;
+}
+
+/* Mũi nhọn */
+.achievement-detail-box::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid #f5c400;
+}
+
+/* Item */
+.achievement-detail-item {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+/* Divider */
+.achievement-detail-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 20%;
+  width: 1px;
+  height: 60%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Text */
+.achievement-detail-item h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.achievement-detail-item p {
+  margin: 5px 0 0;
+  font-size: 13px;
+}
+
+.gallery {
+  background: linear-gradient(to right, #000, #888);
+  padding: 45px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.gallery:hover .nav {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+/* Wrapper */
+.slider-wrapper {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Slider */
+.slider {
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.item {
+  flex: 0 0 calc((100% - 90px) / 4);
+  margin-right: 30px;
+}
+
+.item:nth-child(4n) {
+  margin-right: 0; /* item cuối mỗi page */
+}
+
+/* Item */
+.item {
+  flex: 0 0 calc((100% - 90px) / 4); /* 4 item + gap */
+  aspect-ratio: 1 / 1; /* 🔥 QUAN TRỌNG: luôn vuông */
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Img */
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.nav {
+  opacity: 0;
+  transform: translateY(-50%) scale(0.8);
+  transition: all 0.3s ease;
+}
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+/* SVG */
+.nav svg {
+  width: 40px;
+  height: 40px;
+  stroke: #fff;
+  stroke-width: 2.5;
+  fill: none;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.prev:hover svg {
+  transform: translateX(-5px);
+}
+
+.next:hover svg {
+  transform: translateX(5px);
+}
+
+/* Glow nhẹ */
+.nav:hover svg {
+  /* stroke: #ffd700; */
+  filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.6));
+}
+
+.prev {
+  left: -80px;   /* hoặc 0 nếu muốn sát slider */
+}
+
+.next {
+  right: -80px;
+}
+
+.partner {
+  position: relative;
+  padding: 20px 20px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.bg-text {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Track chạy */
+.bg-track {
+  display: flex;
+  gap: 60px;
+  /* khoảng cách giữa cụm */
+  width: max-content;
+  animation: marquee 10s linear infinite;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Base text */
+.bg-track span {
+  font-size: 160px;
+  /* 🔥 tăng size */
+  white-space: nowrap;
+  color: rgba(0, 0, 0, 0.05);
+}
+
+/* ĐỐI TÁC - mảnh */
+.bg-track .vi {
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+
+/* PARTNER - đậm */
+.bg-track .en {
+  font-weight: 800;
+}
+
+/* Loop animation */
+@keyframes marquee {
+  from {
+      transform: translateX(0);
+  }
+
+  to {
+      transform: translateX(-50%);
+  }
+}
+
+/* GRID logo */
+.partners-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 60px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* LOGO */
+.partners-grid img {
+  max-width: 120px;
+  margin: 0 auto;
+  display: block;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.partners-grid img:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .partners-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bg-text {
+      font-size: 60px;
+  }
+}
+
+.contact {
+  position: relative;
+  background: url("bg.jpg") center/cover no-repeat;
+  padding: 100px 20px;
+  color: #fff;
+}
+
+/* overlay tối */
+.contact .overlay {
+  position: absolute;
+  inset: 0;
+  background-image: url(https://enjogroup.com/wp-content/uploads/2018/01/service-bg-5.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 635px;
+}
+
+/* content */
+.contact .content {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+
+.contact .divider {
+  width: 40px;
+  height: 2px;
+  background: #fff;
+  margin: 10px auto 30px;
+}
+
+/* info */
+.contact .info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* social */
+.contact .social {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.contact .icon {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.contact .icon:hover {
+  color: #ffd700;
+}
+
+/* form */
+.contact .form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact .row {
+  display: flex;
+  gap: 10px;
+}
+
+.contact input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+.contact textarea {
+  height: 120px;
+}
+
+/* button */
+.contact button {
+  width: 100%;
+  padding: 12px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact button:hover {
+  background: #222;
 }

@@ -51,18 +51,14 @@ function renderSlides() {
   const html = config.slides
     .map(
       (slide) => `
-      <article class="slide">
+      <div class="item">
         <img src="${slide.image}" alt="${slide.title}" />
-        <div class="slide-content">
-          <h3>${slide.title}</h3>
-          <p>${slide.description}</p>
-        </div>
-      </article>
+      </div>
     `
     )
     .join("");
 
-  $("slides-wrapper").innerHTML = html;
+  $("track").innerHTML = html;
 }
 
 function renderVideos() {
@@ -97,20 +93,6 @@ function renderVideos() {
   $("video-grid").innerHTML = html;
 }
 
-function renderStats() {
-  const html = config.stats
-    .map(
-      (stat) => `
-      <article class="stat-box">
-        <h3>${stat.value}</h3>
-        <p>${stat.label}</p>
-      </article>
-    `
-    )
-    .join("");
-
-  $("stats-grid").innerHTML = html;
-}
 
 function renderPartners() {
   const html = config.partners
@@ -142,24 +124,41 @@ function renderContact() {
 }
 
 function initSlider() {
-  const wrapper = $("slides-wrapper");
-  const slides = config.slides.length;
-  let index = 0;
-
-  const updateSlide = () => {
-    wrapper.style.transform = `translateX(-${index * 100}%)`;
-  };
-
-  $("slide-prev").addEventListener("click", () => {
-    index = (index - 1 + slides) % slides;
-    updateSlide();
+  const track = document.getElementById("track");
+  const next = document.querySelector(".next");
+  const prev = document.querySelector(".prev");
+  
+  const items = document.querySelectorAll(".item");
+  const perPage = 4;
+  
+  const totalItems = items.length;
+  const totalPages = Math.ceil(totalItems / perPage);
+  
+  let currentPage = 0;
+  
+  function updateSlider() {
+    const sliderWidth = document.querySelector(".slider").offsetWidth;
+    track.style.transform = `translateX(-${currentPage * sliderWidth}px)`;
+  }
+  
+  /* NEXT */
+  next.addEventListener("click", () => {
+    currentPage++;
+    if (currentPage >= totalPages) currentPage = 0; // loop
+    updateSlider();
   });
-
-  $("slide-next").addEventListener("click", () => {
-    index = (index + 1) % slides;
-    updateSlide();
+  
+  /* PREV */
+  prev.addEventListener("click", () => {
+    currentPage--;
+    if (currentPage < 0) currentPage = totalPages - 1; // loop
+    updateSlider();
   });
+  
+  /* Resize fix */
+  window.addEventListener("resize", updateSlider);
 }
+
 
 function initActions() {
   const ctaPrimary = $("cta-primary");
@@ -214,6 +213,58 @@ function initStickyHeader() {
   window.addEventListener("scroll", updateHeaderState, { passive: true });
 }
 
+function initEnjohubParallax() {
+  const card = document.querySelector(".enjohub-intro-card");
+  const bg = document.querySelector(".enjohub-bg-parallax");
+  if (!card || !bg) return;
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  let rafId = null;
+
+  const update = () => {
+    const rect = card.getBoundingClientRect();
+    const vh = window.innerHeight || 1;
+    const sectionCenter = rect.top + rect.height / 2;
+    const viewportCenter = vh / 2;
+    const delta = sectionCenter - viewportCenter;
+    const offset = -(delta / vh) * 96;
+    bg.style.transform = `translate3d(0, ${offset}px, 0)`;
+  };
+
+  const onScrollOrResize = () => {
+    if (rafId != null) return;
+    rafId = window.requestAnimationFrame(() => {
+      update();
+      rafId = null;
+    });
+  };
+
+  window.addEventListener("scroll", onScrollOrResize, { passive: true });
+  window.addEventListener("resize", onScrollOrResize, { passive: true });
+  update();
+}
+
+function initRevealAnimations() {
+  const revealItems = document.querySelectorAll(".reveal-item");
+  if (!revealItems.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries, instance) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          instance.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.22 }
+  );
+
+  revealItems.forEach((item) => observer.observe(item));
+}
+
+
 function initApp() {
   if (!config) {
     return;
@@ -224,12 +275,14 @@ function initApp() {
   renderProjects();
   renderSlides();
   renderVideos();
-  renderStats();
+  // renderStats();
   renderPartners();
   renderContact();
   initSlider();
   initActions();
   initStickyHeader();
+  initEnjohubParallax();
+  initRevealAnimations();
 }
 
 initApp();

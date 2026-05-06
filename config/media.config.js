@@ -1,38 +1,38 @@
 window.LANDING_MEDIA_CONFIG = {
   brand: {
     companyName: "zDauPhu",
-    slogan: "Enjoy Childhood Everywhere",
+    slogan: "Mãi Mãi Tinh Thần Khởi Nghiệp",
     logo: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=240&q=80",
   },
   hero: {
     backgroundImage:
       "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80",
-    title: "Nhà Xuất Bản Nội Dung & Công Nghệ",
+    title: "Sáng Tạo Không Giới Hạn - Thành Công Không Biên Giới",
     subtitle:
-      "Chúng tôi sở hữu hệ thống nội dung Youtube, Facebook với hàng triệu người theo dõi.",
-    ctaPrimary: "Tìm Hiểu Thêm",
-    ctaSecondary: "Liên Hệ Ngay",
+      "zDauPhu phát triển nội dung video giải trí và âm nhạc trên các nền tảng số, hướng tới giá trị bền vững cho đối tác và cộng đồng.",
+    ctaPrimary: "Tham Gia Ngay",
+    ctaSecondary: "Liên Hệ",
   },
   services: [
     {
-      title: "Publisher",
-      subtitle: "Youtube, Facebook",
+      title: "Giá trị cốt lõi",
+      subtitle: "Sáng tạo - Chất lượng - Lan tỏa",
       description:
-        "Sở hữu mạng lưới kênh nội dung lớn, tối ưu hiệu quả tiếp cận và tăng trưởng bền vững.",
+        "TTM Group cam kết tạo ra những video giải trí có giá trị thiết thực cho cộng đồng, đồng thời mang các sản phẩm nội dung sáng tạo của Việt Nam vươn tầm quốc tế. Chúng tôi đề cao sự sáng tạo, đổi mới và chất lượng, góp phần lan tỏa văn hóa Việt đến bạn bè thế giới.",
       icon: "https://cdn-icons-png.flaticon.com/512/1384/1384060.png",
     },
     {
-      title: "Marketing",
-      subtitle: "Quảng Cáo",
+      title: "Mục tiêu",
+      subtitle: "Nâng cao chất lượng và hiệu quả",
       description:
-        "Đội ngũ marketer hỗ trợ thương hiệu tiếp cận đúng khách hàng mục tiêu trên nền tảng số.",
+        "Chúng tôi muốn tập trung nâng cao chất lượng và hiệu quả của các sản phẩm video âm nhạc, giải trí trên các nền tảng số. TTM Group không ngừng đổi mới, mang đến cho đối tác và khán giả những sản phẩm vượt trội, đáp ứng nhu cầu thị trường một cách bền vững.",
       icon: "https://cdn-icons-png.flaticon.com/512/1087/1087927.png",
     },
     {
-      title: "Distribution",
-      subtitle: "Content Distribution",
+      title: "Tầm nhìn",
+      subtitle: "Vươn xa trên nền tảng số",
       description:
-        "Hợp tác toàn cầu để phân phối nội dung và đồng hành phát triển các dự án tiềm năng.",
+        "TTM Group hướng tới xây dựng doanh nghiệp sản xuất video, âm nhạc, giải trí tuyệt vời trên các nền tảng số, đặc biệt là Youtube. Với tầm nhìn dài hạn, chúng tôi luôn cố gắng hoàn thiện cho từng sản phẩm, góp phần đưa các sản phẩm video và âm nhạc của Việt Nam mở rộng ra các thị trường trên thế giới.",
       icon: "https://cdn-icons-png.flaticon.com/512/1828/1828919.png",
     },
   ],
@@ -62,12 +62,12 @@ window.LANDING_MEDIA_CONFIG = {
         "https://images.unsplash.com/photo-1586892478025-2b5472316f22?auto=format&fit=crop&w=800&q=80",
     },
     {
-      slug: "dinosaur",
-      name: "Dinosaur",
+      slug: "mini-farm",
+      name: "Mini Farm",
       description:
-        "Series nội dung thế giới khủng long kết hợp giải trí và kiến thức khám phá cho trẻ em.",
+        "Nội dung mô phỏng nông trại thân thiện, giúp trẻ hiểu thêm về thiên nhiên và cuộc sống.",
       image:
-        "https://images.unsplash.com/photo-1610746018794-6320d5f30f95?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=800&q=80",
     },
     {
       slug: "mini-farm",
@@ -85,34 +85,114 @@ window.LANDING_MEDIA_CONFIG = {
       image:
         "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=800&q=80",
     },
+    {
+      slug: "leo-learn-and-play",
+      name: "Leo Learn and Play",
+      description:
+        "Nội dung học mà chơi giúp trẻ khám phá kiến thức thông qua hoạt động trực quan sinh động.",
+      image:
+        "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      slug: "cars-toys",
+      name: "Cars Toys",
+      description:
+        "Dự án nội dung xe đồ chơi và hoạt hình chuyển động với phong cách nhịp nhanh, vui nhộn.",
+      image:
+        "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=800&q=80",
+    },
   ],
   slides: [
     {
-      title: "Nội Dung Thiếu Nhi",
-      description: "Kênh giáo dục và giải trí an toàn, giàu giá trị cho trẻ em.",
+      title: "Sản Xuất & Phân Phối",
+      description:
+        "Phát triển hệ thống nội dung đa dạng trên Youtube, Facebook, TikTok với định hướng tối ưu hiệu quả tiếp cận.",
       image:
         "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1400&q=80",
     },
     {
-      title: "Sáng Tạo Đa Nền Tảng",
+      title: "Hợp Tác & Khai Thác",
       description:
-        "Sản xuất, tối ưu và phân phối nội dung trên Youtube, Facebook và nền tảng số.",
+        "Đồng hành cùng đối tác từ chiến lược nội dung, tối ưu SEO đến tăng trưởng kênh và khai thác doanh thu bền vững.",
       image:
         "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=80",
     },
     {
-      title: "Tăng Trưởng Bền Vững",
+      title: "Hỗ Trợ Kỹ Thuật & Công Nghệ",
       description:
-        "Kết hợp công nghệ dữ liệu để phát triển hệ sinh thái nội dung hiệu quả cao.",
+        "Ứng dụng công nghệ và dữ liệu để nâng cao hiệu suất kênh, mở rộng khả năng tiếp cận người xem trên nền tảng số.",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80",
+    },
+    {
+      title: "Hợp Tác & Khai Thác",
+      description:
+        "Đồng hành cùng đối tác từ chiến lược nội dung, tối ưu SEO đến tăng trưởng kênh và khai thác doanh thu bền vững.",
+      image:
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=80",
+    },
+    {
+      title: "Sản Xuất & Phân Phối",
+      description:
+        "Phát triển hệ thống nội dung đa dạng trên Youtube, Facebook, TikTok với định hướng tối ưu hiệu quả tiếp cận.",
+      image:
+        "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1400&q=80",
+    },
+    {
+      title: "Hỗ Trợ Kỹ Thuật & Công Nghệ",
+      description:
+        "Ứng dụng công nghệ và dữ liệu để nâng cao hiệu suất kênh, mở rộng khả năng tiếp cận người xem trên nền tảng số.",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80",
+    },
+    {
+      title: "Sản Xuất & Phân Phối",
+      description:
+        "Phát triển hệ thống nội dung đa dạng trên Youtube, Facebook, TikTok với định hướng tối ưu hiệu quả tiếp cận.",
+      image:
+        "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1400&q=80",
+    },
+    {
+      title: "Hợp Tác & Khai Thác",
+      description:
+        "Đồng hành cùng đối tác từ chiến lược nội dung, tối ưu SEO đến tăng trưởng kênh và khai thác doanh thu bền vững.",
+      image:
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=80",
+    },
+    {
+      title: "Hỗ Trợ Kỹ Thuật & Công Nghệ",
+      description:
+        "Ứng dụng công nghệ và dữ liệu để nâng cao hiệu suất kênh, mở rộng khả năng tiếp cận người xem trên nền tảng số.",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80",
+    },
+    {
+      title: "Hợp Tác & Khai Thác",
+      description:
+        "Đồng hành cùng đối tác từ chiến lược nội dung, tối ưu SEO đến tăng trưởng kênh và khai thác doanh thu bền vững.",
+      image:
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=80",
+    },
+    {
+      title: "Sản Xuất & Phân Phối",
+      description:
+        "Phát triển hệ thống nội dung đa dạng trên Youtube, Facebook, TikTok với định hướng tối ưu hiệu quả tiếp cận.",
+      image:
+        "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1400&q=80",
+    },
+    {
+      title: "Hỗ Trợ Kỹ Thuật & Công Nghệ",
+      description:
+        "Ứng dụng công nghệ và dữ liệu để nâng cao hiệu suất kênh, mở rộng khả năng tiếp cận người xem trên nền tảng số.",
       image:
         "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80",
     },
   ],
   stats: [
-    { label: "Người theo dõi trên Youtube", value: "10M+" },
-    { label: "Lượt xem video toàn hệ thống", value: "40B+" },
-    { label: "Hệ thống kênh Youtube", value: "200+" },
-    { label: "Giải thưởng từ Youtube", value: "50+" },
+    { label: "Đối tác trong và ngoài nước", value: "1000+" },
+    { label: "Lượt xem toàn hệ thống", value: "20,000,000,000" },
+    { label: "Kênh đang quản lý", value: "3500+" },
+    { label: "Nhân sự năng động, sáng tạo", value: "200+" },
   ],
   videos: [
     {
@@ -122,10 +202,23 @@ window.LANDING_MEDIA_CONFIG = {
     },
   ],
   partners: [
-    "https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=180&q=80",
-    "https://images.unsplash.com/photo-1611095965924-6b86e8f88f5a?auto=format&fit=crop&w=180&q=80",
-    "https://images.unsplash.com/photo-1633419461186-7d40a38105ec?auto=format&fit=crop&w=180&q=80",
-    "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?auto=format&fit=crop&w=180&q=80",
+    "https://enjogroup.com/wp-content/uploads/2024/04/WOA-300x300.png",
+    "https://enjogroup.com/wp-content/uploads/2024/04/fb-300x300.png",
+    "https://enjogroup.com/wp-content/uploads/2026/01/ttm.png",
+    "https://enjogroup.com/wp-content/uploads/2026/01/izo-1.png",
+    "https://enjogroup.com/wp-content/uploads/2024/04/tuban-300x300.png",
+
+    "https://enjogroup.com/wp-content/uploads/2026/01/yoola-2.png",
+    "https://enjogroup.com/wp-content/uploads/2026/01/tiktok-2.png",
+    "https://enjogroup.com/wp-content/uploads/2024/04/SC-300x300.png",
+    "https://enjogroup.com/wp-content/uploads/2024/04/yt-300x300.png",
+    "https://enjogroup.com/wp-content/uploads/2024/04/Hisen-300x300.png",
+
+    "https://enjogroup.com/wp-content/uploads/2024/04/Leadjoy-300x300.png",
+    "https://enjogroup.com/wp-content/uploads/2026/01/fut-2.png",
+    "https://enjogroup.com/wp-content/uploads/2026/01/cube-2.png",
+    "https://enjogroup.com/wp-content/uploads/2024/04/lenny11-300x300.png",
+    "https://enjogroup.com/wp-content/uploads/2024/04/aia-300x300.png",
   ],
   contact: {
     phone: "0969 326 126",

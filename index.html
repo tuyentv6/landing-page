@@ -1,125 +1,252 @@
 <!doctype html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>zDauPhu Landing Page</title>
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="./index.html">
-          <img id="brand-logo" alt="Logo" />
-          <span id="brand-name"></span>
-        </a>
-        <nav class="main-nav">
-          <a href="#about">Giới Thiệu</a>
-          <a href="#projects">Dự Án</a>
-          <a href="#news">Tin Tức</a>
-          <a href="#partners">Đối Tác</a>
-          <a href="#contact">Liên Hệ</a>
-        </nav>
-      </div>
-    </header>
 
-    <section id="hero" class="hero">
-      <div class="overlay"></div>
-      <div class="container hero-content">
-        <p class="eyebrow" id="hero-eyebrow"></p>
-        <h1 id="hero-title"></h1>
-        <p id="hero-subtitle"></p>
-        <div class="hero-actions">
-          <button id="cta-primary" class="btn btn-primary"></button>
-          <button id="cta-secondary" class="btn btn-ghost"></button>
-        </div>
-      </div>
-    </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>zDauPhu Landing Page</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
 
-    <section id="about" class="section">
-      <div class="container">
-        <h2 class="section-title">Chúng tôi là zDauPhu</h2>
-        <p class="section-subtitle">
-          Tuổi trẻ đam mê và nhiệt huyết, mang lại nhiều giá trị cho cộng đồng.
-        </p>
-        <div id="services-grid" class="services-grid"></div>
-      </div>
-    </section>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="./index.html">
+        <img id="brand-logo" alt="Logo" />
+        <span id="brand-name"></span>
+      </a>
+      <nav class="main-nav">
+        <a href="#about">Giới Thiệu</a>
+        <a href="#projects">Dự Án</a>
+        <a href="#news">Tin Tức</a>
+        <a href="#partners">Đối Tác</a>
+        <a href="#contact">Liên Hệ</a>
+      </nav>
+    </div>
+  </header>
 
-    <section class="section section-alt">
-      <div class="container">
-        <h2 class="section-title">Nổi Bật</h2>
-        <div class="slider" id="slider">
-          <button class="slider-btn prev" id="slide-prev" aria-label="Previous">
-            &#10094;
-          </button>
-          <div id="slides-wrapper" class="slides-wrapper"></div>
-          <button class="slider-btn next" id="slide-next" aria-label="Next">
-            &#10095;
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <div class="container">
-        <h2 class="section-title">Dự Án Nổi Bật</h2>
-        <div id="projects-grid" class="projects-grid"></div>
-      </div>
-    </section>
-
-    <section id="news" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title">Video Giới Thiệu</h2>
-        <div id="video-grid" class="video-grid"></div>
-      </div>
-    </section>
-
-    <section class="section stats-section">
-      <div class="container">
-        <h2 class="section-title">Những Con Số Ấn Tượng</h2>
-        <div id="stats-grid" class="stats-grid"></div>
-      </div>
-    </section>
-
-    <section id="partners" class="section">
-      <div class="container">
-        <h2 class="section-title">Đối Tác</h2>
-        <div id="partners-grid" class="partners-grid"></div>
-      </div>
-    </section>
-
-    <footer id="contact" class="site-footer">
-      <div class="container footer-content">
-        <div>
-          <h3>Liên Hệ</h3>
-          <p id="contact-phone"></p>
-          <p id="contact-address"></p>
-          <p id="contact-email"></p>
-        </div>
-        <p class="copyright">Copyright © zDauPhu</p>
-      </div>
-    </footer>
-
-    <div id="contact-modal" class="modal" aria-hidden="true">
-      <div class="modal-backdrop" id="modal-backdrop"></div>
-      <div class="modal-content" role="dialog" aria-modal="true" aria-label="Thông tin liên hệ">
-        <button id="modal-close" class="modal-close" aria-label="Đóng">&times;</button>
-        <h3>Thông tin liên hệ</h3>
-        <p id="modal-phone"></p>
-        <p id="modal-address"></p>
-        <p id="modal-email"></p>
+  <section id="hero" class="hero">
+    <div class="overlay"></div>
+    <div class="container hero-content">
+      <p class="eyebrow" id="hero-eyebrow"></p>
+      <h1 id="hero-title"></h1>
+      <p id="hero-subtitle"></p>
+      <div class="hero-actions">
+        <button id="cta-primary" class="btn btn-primary"></button>
+        <button id="cta-secondary" class="btn btn-ghost"></button>
       </div>
     </div>
+  </section>
 
-    <script src="./config/media.config.js"></script>
-    <script src="./script.js"></script>
-  </body>
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-marquee" aria-label="Thông điệp thương hiệu">
+          <div class="about-marquee-track">
+            <span>Sáng tạo không giới hạn - thành công không biên giới.</span>
+          </div>
+        </div>
+        <h2 class="section-title">Về Chúng Tôi</h2>
+        <div id="services-grid" class="services-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section enjohub-intro">
+    <div class="enjohub-intro-card">
+      <div class="enjohub-bg-parallax" aria-hidden="true"></div>
+      <div class="enjohub-intro-content">
+        <p class="enjohub-eyebrow">Tuổi trẻ đam mê và nhiệt huyết</p>
+        <h2>Chúng tôi là ENJOHUB</h2>
+        <p>
+          Từng thành viên của ENJOHUB đều đam mê và khát vọng đóng góp xây dựng cho công ty ngày
+          một phát triển. Mang lại nhiều giá trị cho cộng đồng và xã hội.
+        </p>
+        <a class="enjohub-btn" href="./about.html">Tìm Hiểu Thêm</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section achievement-strip">
+    <div class="achievement-strip-inner">
+      <div class="achievement-video-bg-container">
+        <video class="achievement-video-bg " preload="metadata" playsinline autoplay muted loop aria-hidden="true">
+          <source src="https://ttmgroup.vn/wp-content/uploads/2025/02/3nutyoutube-1.webm" type="video/webm" />
+        </video>
+      </div>
+      <div class="achievement-grid">
+        <article class="achievement-item reveal-item">
+          <p class="achievement-highlight">1000+</p>
+          <p class="achievement-caption">Đối tác trong và ngoài nước</p>
+        </article>
+        <article class="achievement-item reveal-item">
+          <p class="achievement-highlight">20,000,000,000</p>
+          <p class="achievement-caption">Lượt xem Youtube</p>
+        </article>
+        <article class="achievement-item reveal-item">
+          <p class="achievement-highlight">3500</p>
+          <p class="achievement-caption">Kênh đang quản lý</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="project-container">
+      <h2 class="section-title">Dự Án Triển Khai</h2>
+      <div id="projects-grid" class="projects-grid"></div>
+    </div>
+  </section>
+
+  <section id="news" class="section section-alt" style="display: none;">
+    <div class="container">
+      <h2 class="section-title">Tin Tức & Video</h2>
+      <div id="video-grid" class="video-grid"></div>
+    </div>
+  </section>
+
+  <section class="achievement-detail">
+    <h2 class="section-title">THÀNH TỰU</h2>
+
+    <div class="achievement-detail-box">
+      <div class="achievement-detail-item">
+        <h3>300+</h3>
+        <p>Đối Tác Thương Hiệu</p>
+      </div>
+      <div class="achievement-detail-item">
+        <h3>100+</h3>
+        <p>Chủ Đề</p>
+      </div>
+      <div class="achievement-detail-item">
+        <h3>200+</h3>
+        <p>Nhân Sự</p>
+      </div>
+      <div class="achievement-detail-item">
+        <h3>70+</h3>
+        <p>Dự Án</p>
+      </div>
+      <div class="achievement-detail-item">
+        <h3>50+</h3>
+        <p>Nội Dung Xu Hướng</p>
+      </div>
+    </div>
+    <div class="about-marquee" aria-label="Thông điệp thương hiệu">
+      <div class="about-marquee-track">
+        <span>Sáng tạo không giới hạn - thành công không biên giới.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="section" style="display: none;">
+    <div class="container">
+      <h2 class="section-title">Hoạt Động Nổi Bật</h2>
+      <div class="slider" id="slider">
+        <button class="slider-btn prev" id="slide-prev" aria-label="Previous">
+          &#10094;
+        </button>
+        <div id="slides-wrapper" class="slides-wrapper"></div>
+        <button class="slider-btn next" id="slide-next" aria-label="Next">
+          &#10095;
+        </button>
+      </div>
+    </div>
+  </section> -->
+  <section class="section gallery">
+    <h2 class="section-title">HOẠT ĐỘNG NỔI BẬT</h2>
+
+    <div class="slider-wrapper">
+      <button class="nav prev">
+        <svg viewBox="0 0 24 24">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+      </button>
+      <div class="slider" id="slider">
+        <div class="track" id="track">
+
+        </div>
+      </div>
+
+      <button class="nav next">
+        <svg viewBox="0 0 24 24">
+          <path d="M9 6l6 6-6 6" />
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <section id="partners" class="section partner">
+    <div class="bg-text">
+      <div class="bg-track">
+        <span class="vi">ĐỐI TÁC</span>
+        <span class="en">PARTNER</span>
+
+        <!-- duplicate để loop -->
+        <span class="vi">ĐỐI TÁC</span>
+        <span class="en">PARTNER</span>
+      </div>
+    </div>
+    <div id="partners-grid" class="partners-grid"></div>
+  </section>
+  <section class="section contact">
+    <div class="overlay"></div>
+
+    <div class="content">
+        <h2>LIÊN HỆ</h2>
+        <div class="divider"></div>
+
+        <!-- Info -->
+        <div class="info">
+            <span>📞 0969 326 126</span>
+            <span>📍 Số 157 Đường Cầu Diễn, Hà Nội</span>
+        </div>
+
+        <!-- Social -->
+        <div class="social">
+
+
+            <a href="mailto:..." class="icon"><i class="fa fa-envelope"></i> Email</a>
+            <a href="..." class="icon"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="..." class="icon"><i class="fab fa-youtube"></i> Youtube</a>
+        </div>
+
+        <!-- Form -->
+        <form class="form">
+            <div class="row">
+                <input type="text" placeholder="Họ Tên">
+                <input type="email" placeholder="Email">
+            </div>
+
+            <textarea placeholder="Lời Nhắn"></textarea>
+
+            <button type="submit">GỬI</button>
+        </form>
+    </div>
+</section>
+  <footer id="contact" class="site-footer">
+    <div class="container footer-content">
+      <p class="copyright">Copyright © zDauPhu</p>
+    </div>
+  </footer>
+
+  <!-- <div id="contact-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-label="Thông tin liên hệ">
+      <button id="modal-close" class="modal-close" aria-label="Đóng">&times;</button>
+      <h3>Thông tin liên hệ</h3>
+      <p id="modal-phone"></p>
+      <p id="modal-address"></p>
+      <p id="modal-email"></p>
+    </div>
+  </div> -->
+
+  <script src="./config/media.config.js"></script>
+  <script src="./script.js"></script>
+</body>
+
 </html>
